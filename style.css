@@ -1,0 +1,371 @@
+:root {
+  --Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+  --pink: hsl(322, 100%, 66%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* start head */
+
+.container {
+  height: 80vh;
+  background-color: var(--Very-Pale-Cyan);
+  background-image: url("images/bg-hero-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.container .head .logo {
+  padding: 0 10px;
+}
+
+.container .head .try {
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  width: 200px;
+  color: var(--Grayish-Blue);
+  background-color: white;
+  box-shadow: 0 0 5px 1px;
+  cursor: pointer;
+}
+
+.container .head .try:hover {
+  background-color: whitesmoke;
+}
+
+@media (max-width: 778px) {
+  .container .head .logo img {
+    width: 145px;
+    padding: 0 10px 0 0;
+  }
+  .container .head .try {
+    padding: 10px 10px;
+    width: 122px;
+  }
+}
+
+/* @media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+} */
+
+/* end head */
+/* start sec1  */
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 5px;
+  gap: 20px;
+}
+.content .text {
+  margin-left: 20px;
+
+  margin-bottom: 20px;
+}
+.content .text h2 {
+  font-size: 30px;
+  font-weight: bold;
+  width: 360px;
+}
+.content .text p {
+  padding: 20px 0;
+  font-size: 17px;
+  color: var(--Grayish-Blue);
+  width: 400px;
+}
+
+.content .text button {
+  padding: 20px 50px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  margin: 20px 0;
+  background-color: var(--pink);
+  color: white;
+  cursor: pointer;
+}
+.content .text button:hover {
+  background-color: hsl(322, 100%, 50%);
+}
+
+.content .image img {
+  width: 630px;
+  padding: 10px;
+}
+@media (max-width: 778px) {
+  .container {
+    background-image: url(images/bg-hero-mobile.svg);
+    height: 100vh;
+  }
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .content .text h2 {
+    margin: auto;
+  }
+  .content .text {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .content .text p {
+    margin: 0 20px;
+  }
+  .content .image img {
+    width: 300px;
+    margin: 0 10px;
+  }
+}
+
+/* end sec1  */
+/* start sec2  */
+section {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+  margin: 50px 0;
+}
+section .col {
+  padding: 40px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 450px;
+  width: 85%;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  gap: 30px;
+  transition: 0.3s ease;
+}
+@media (max-width: 778px) {
+  section {
+    grid-template-rows: repeat(3, minmax(300px, 1fr));
+  }
+  section .col {
+    flex-direction: column;
+    height: 650px;
+    text-align: center;
+    padding: 40px 0;
+  }
+  section .col .txt {
+    width: 90% !important;
+    margin: 0px !important;
+    padding: 0 30px;
+  }
+  section .col .txt p {
+    margin: auto;
+  }
+}
+section .col:hover {
+  transform: translateY(-15px);
+}
+
+section .col .txt {
+  width: 550px;
+  margin-left: 60px;
+}
+
+section .col .txt h2 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+section .col .txt p {
+  color: var(--Grayish-Blue);
+  font-size: 18px;
+  font-weight: 400;
+}
+section .img img {
+  width: 300px;
+}
+
+/* end sec2  */
+
+/* start foooter  */
+footer {
+  /* height: 600px; */
+  background-color: var(--Very-Dark-Cyan);
+  margin: 200px 0 0;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  padding: 100px 81px;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+/* start popup  */
+.popup {
+  position: absolute;
+  left: 25%;
+  bottom: 430px;
+  padding: 30px;
+  margin: 20px auto;
+  font-size: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+}
+
+.popup button {
+  padding: 20px 40px;
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+  border: none;
+  color: white;
+  background-color: var(--pink);
+  border-radius: 30px;
+  margin: 30px auto;
+  cursor: pointer;
+}
+.popup button:hover {
+  background-color: hsl(322, 100%, 50%);
+}
+/* end popup  */
+footer .col1 .logo {
+  display: flex;
+  align-items: center;
+}
+footer .col1 .logo svg {
+  width: 80px;
+}
+footer .col1 h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+footer .list {
+  display: flex;
+  align-items: center;
+  margin: 25px 0px;
+}
+
+footer .col1 .list i {
+  margin-right: 10px;
+}
+footer .col1 .list p {
+  color: var(--Grayish-Blue);
+}
+
+footer .col2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .col2 .txts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer .col2 .txts a {
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
+}
+footer .col3 {
+  position: relative;
+}
+
+footer .col3 i {
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 9px;
+  border: 1px solid white;
+}
+footer .col3 .copy {
+  position: absolute;
+  left: 0px;
+  top: 116px;
+  font-size: 14px;
+}
+@media (max-width: 778px) {
+  footer {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, minmax(200px, 1fr));
+    padding: 120px 10px;
+  }
+  footer .col2 {
+    flex-direction: column;
+    width: 130px;
+    padding: 0 10px;
+  }
+  footer .col2 .txts {
+    margin: 10px 0;
+  }
+  footer .col3 {
+    margin: auto;
+  }
+  footer .copy {
+    left: -74px !important;
+    top: 116px !important;
+    font-size: 14px !important;
+    width: 330px !important;
+  }
+  .popup {
+    left: 5px;
+    font-size: 15px;
+    padding: 20px 10px;
+    bottom: 1154px;
+  }
+  .popup button {
+    padding: 15px 0;
+    font-size: 17px;
+  }
+}
+
+/* end foooter  */
